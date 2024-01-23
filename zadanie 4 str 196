@@ -1,0 +1,17 @@
+def split_string_at_first_a(input_word):
+    
+    index_of_a = input_word.find('a')
+
+    
+    if index_of_a != -1:
+        first_part = input_word[:index_of_a + 1]
+        print("First part:", first_part)
+
+        rest_part = input_word[index_of_a + 1:]
+        print("Rest of the string:", rest_part)
+    else:
+        print("The word doesn't contain the letter 'a'.")
+
+user_input = input("Enter a word that contains the letter 'a': ")
+
+split_string_at_first_a(user_input)
