@@ -1,0 +1,10 @@
+import random
+
+computer_choice = random.choice(['h', 't'])
+
+user_choice = input("Enter your choice (h or t): ")
+
+if user_choice == computer_choice:
+    print("Bad luck")
+
+print(f"The computer selected {computer_choice}")
