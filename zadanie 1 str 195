@@ -1,0 +1,9 @@
+user_number = int(input("Enter a number: "))
+
+
+if user_number < 10:
+    print("Too low")
+elif 10 <= user_number <= 20:
+    print("Correct")
+else:
+    print("Too high")
