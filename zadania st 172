@@ -1,0 +1,62 @@
+# Funkcja do drukowania odwróconego trójkąta
+def drukuj_odwrocony_trojkat(wysokosc):
+    print("Odwrocony trojkat:")
+    for i in range(wysokosc, 0, -1):
+        print(" " * (wysokosc - i) + "*" * (2 * i - 1))
+
+# Funkcja do drukowania diamentu
+def drukuj_diament(wysokosc):
+    print("Diament:")
+    for i in range(1, wysokosc + 1):
+        print(" " * (wysokosc - i) + "*" * (2 * i - 1))
+    for i in range(wysokosc - 1, 0, -1):
+        print(" " * (wysokosc - i) + "*" * (2 * i - 1))
+
+# Funkcja do drukowania gigantycznej litery 'A'
+def drukuj_gigantyczna_A(rozmiar):
+    print("Gigantyczna Litera 'A':")
+    for i in range(rozmiar):
+        print(" " * (rozmiar - i - 1) + "*" * (2 * i + 1))
+    for i in range(rozmiar - 1):
+        print(" " * i + "*" * (2 * (rozmiar - i) - 1))
+
+# Funkcja do budowania ciągu samogłoskowego wprowadzanego przez użytkownika
+def buduj_ciag_samoglosek():
+    ciag_samoglosek = ""
+    while True:
+        wejscie_uzytkownika = input("Wprowadz litere (nacisnij Enter, aby zakonczyc): ")
+        if wejscie_uzytkownika == "":
+            break
+        elif wejscie_uzytkownika.lower() in "aeiou":
+            ciag_samoglosek += wejscie_uzytkownika
+    return ciag_samoglosek
+
+# Funkcja do drukowania imienia w zabawnym wzorze
+def drukuj_zabawny_wzor(imie):
+    print("Zabawny Wzor:")
+    for i in range(len(imie)):
+        print(imie[:i+1])
+
+# Drukuj określony ciąg znaków
+ciag_znakow = "AAAAAAABBBBBBBBBCDCDCDCDEFFFFFFG"
+print(ciag_znakow)
+
+# Pozwól użytkownikowi określić wysokość odwróconego trójkąta
+wysokosc_trojkata = int(input("Podaj wysokość odwróconego trójkąta: "))
+drukuj_odwrocony_trojkat(wysokosc_trojkata)
+
+# Pozwól użytkownikowi określić wysokość diamentu
+wysokosc_diamentu = int(input("Podaj wysokość diamentu: "))
+drukuj_diament(wysokosc_diamentu)
+
+# Pozwól użytkownikowi określić rozmiar gigantycznej litery 'A'
+rozmiar_litery_A = int(input("Podaj rozmiar gigantycznej litery 'A': "))
+drukuj_gigantyczna_A(rozmiar_litery_A)
+
+# Buduj ciąg samogłoskowy wprowadzany przez użytkownika
+ciag_samoglosek = buduj_ciag_samoglosek()
+print(f"Ciąg samogłoskowy wprowadzony przez użytkownika: {ciag_samoglosek}")
+
+# Poproś użytkownika o wprowadzenie imienia i wydrukuj je w zabawnym wzorze
+imie_uzytkownika = input("Podaj swoje imię: ")
+drukuj_zabawny_wzor(imie_uzytkownika)
