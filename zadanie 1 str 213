@@ -1,0 +1,19 @@
+import turtle
+
+# Ustawienia dla żółwia
+turtle.speed(2)
+turtle.pensize(2)
+turtle.bgcolor("white")
+turtle.color("green")
+
+# Rysuj bardzo interesujący kształt
+for _ in range(72):
+    turtle.forward(100)
+    turtle.right(45)
+    turtle.forward(50)
+    turtle.right(90)
+    turtle.forward(50)
+    turtle.right(45)
+
+# Zamknij okno po kliknięciu
+turtle.exitonclick()
