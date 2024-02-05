@@ -1,0 +1,22 @@
+# Generuj listę czterech liczb trzyliczbowych
+number_list = [123, 456, 789, 234]
+
+# Wyświetl listę użytkownikowi
+print("Lista liczb trzyliczbowych:")
+for number in number_list:
+    print(number)
+
+# Poproś użytkownika o wprowadzenie liczby trzyliczbowej
+user_input = input("Wprowadź liczbę trzyliczbową: ")
+
+# Sprawdź, czy wprowadzona liczba znajduje się na liście
+try:
+    user_number = int(user_input)
+    if user_number in number_list:
+        # Wyświetl pozycję liczby na liście
+        position = number_list.index(user_number)
+        print(f"Liczba {user_number} znajduje się na pozycji {position + 1} na liście.")
+    else:
+        print("Ta liczba nie znajduje się na liście.")
+except ValueError:
+    print("Nieprawidłowe dane. Proszę wprowadzić poprawną liczbę trzyliczbową.")
